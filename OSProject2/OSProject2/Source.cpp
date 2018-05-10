@@ -8,8 +8,8 @@ int main() {
 
 	// Set availablility for each dataset
 	int available[4] = { 1, 5, 2, 0 };			//	Dataset 1
-//	int available[4] = { 0, 0, 4, 2};			//	Dataset 2
-//	int available[4] = { 1, 5, 2, 0};			//	Dataset 3
+//	int available[4] = { 0, 0, 4, 2 };			//	Dataset 2
+//	int available[4] = { 1, 5, 2, 0 };			//	Dataset 3
 
 	bool deadlock[5] = { true, true, true, true, true };
 	int deadlock_count = 0;
@@ -168,9 +168,11 @@ int main() {
 
 		if (deadlock[0] == false && deadlock[1] == false && deadlock[2] == false && deadlock[3] == false && deadlock[4] == false) {
 			cout << "All sequences passed.\n\n";
-			int	available[4] = { 1, 5, 2, 0 };
-
+			int	available[4] = { 1, 5, 2, 0 };		// Dataset 1
+//			int available[4] = { 0, 0, 4, 2 };		// Dataset 2
+//			int available[4] = { 1, 5, 2, 0 };		// Dataset 3
 			list<string>::iterator it;
+
 			cout << "Safe sequence:  ";
 			for (it = safe_sequence.begin(); it != safe_sequence.end(); it++) {
 				if (*it == "P0") {
